@@ -15,7 +15,6 @@
           <nav class="nav nav-masthead justify-content-center">
             <a class="nav-link" href="index.html">Главная</a>
             <a class="nav-link active" href="upload.php">Результат</a>
-            <a class="nav-link" href="#">Contact</a>
           </nav>
         </div>
       </header>
