@@ -17,3 +17,9 @@
 
 # Зависимости:
 PHP 4 >= **4.3.0**, PHP **5**, PHP **7**
+
+------
+
+# Используется:
+[Bootstrap](https://getbootstrap.com/ "Bootstrap")
+[FPDF](http://www.fpdf.org/ "FPDF")
