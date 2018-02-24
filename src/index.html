@@ -1,0 +1,44 @@
+﻿<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Загрузка файлов на сервер</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+</head>
+<body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Paper BACKUPER</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="index.html">Главная</a>
+            <a class="nav-link" href="upload.php">Результат</a>
+            <a class="nav-link" href="#">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Вы заботитесь о природе?</h1>
+        <p class="lead">Весь мир обеспокоен снижением количества зеленых насаждений, вырубкой лесов, оскуднением почвы...</p>
+		<p class="lead">Но почему-то никто не задумывается о том вреде для природы, который причиняется при выработке МЕГАВатт электричества, которые тратятся на то, чтобы хранить все те редко используемые файлы, которые есть у нас на компьютерах. Бэкапы, etc<br>Наш сервис предлагает вам загрузить ваш любой файл (архив, картинку, музыку) и получить его в виде машиночитаемого текста. После этого вы сможете распечатать этот файл, и хранить "бумагу". А в нужный момент нужно будет только отсканировать текст, распознать его и обратно конвертировать в файл.</p>
+        <p class="lead">
+		<input type="hidden" name="MAX_FILE_SIZE" value="30000">
+		<form action="upload.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="filename" class="btn btn-secondary"><br><br>
+        <input type="submit" value="Загрузить" class="btn btn-secondary"><br>
+		</form>
+        <a href="#" class="btn btn-lg btn-secondary">Читать больше на GitHub</a>
+        </p>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
+      </footer>
+    </div>
+</body>
+</html>
