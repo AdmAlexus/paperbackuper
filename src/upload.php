@@ -35,7 +35,7 @@ if(  is_uploaded_file($_FILES["filename"]["tmp_name"])  )
         );
 		$file = $_FILES["filename"]["name"];
 		$filetxt = $_FILES["filename"]["name"]  .  ".txt";
-		$upload = file_get_contents($file);
+		$upload = file_get_contents($uploaddir .  DIRECTORY_SEPARATOR  .  $file);
 		file_put_contents($uploaddir .  DIRECTORY_SEPARATOR  .  $filetxt, bin2hex($upload));
 		require('fpdf/fpdf.php');
 		$pdf = new FPDF();
