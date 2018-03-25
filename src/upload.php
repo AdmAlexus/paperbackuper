@@ -38,7 +38,23 @@ if(  is_uploaded_file($_FILES["filename"]["tmp_name"])  )
 		$upload = file_get_contents($uploaddir .  DIRECTORY_SEPARATOR  .  $file);
 		file_put_contents($uploaddir .  DIRECTORY_SEPARATOR  .  $filetxt, bin2hex($upload));
 		require('fpdf/fpdf.php');
-		$pdf = new FPDF();
+		
+		class PDF extends FPDF
+		{ 
+		//Подвал страницы
+		function Footer()
+		{
+			//Позиция на 1,5 cm от нижнего края страницы
+			$this->SetY(-15);
+			//Шрифт Arial, курсив, размер 8
+			$this->SetFont('Arial','I',8);
+			//Номер страницы
+			$this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
+		}
+		}
+		
+		$pdf = new PDF();
+		$pdf->AliasNbPages();
 		$pdf->AddPage();
 		$pdf->SetFont('Arial','',12);
 		$pdf->MultiCell(0,8,'Make with PaperBackuper v0.1');
